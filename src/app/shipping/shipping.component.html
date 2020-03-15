@@ -1,0 +1,11 @@
+<div class="shipping">
+
+    <a class="backButton" [routerLink]="['/']">Back to Productlist</a>
+
+    <h2>Shipping Prices</h2>
+
+    <div class="item" *ngFor="let shipping of shippingCosts | async">
+        <span>{{ shipping.type }} </span>
+        <span>{{ shipping.price }}$</span>
+    </div>
+</div>

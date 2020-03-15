@@ -1,0 +1,116 @@
+
+.cart{
+    padding: 20px;
+}
+
+h2{
+    text-align: center;
+}
+
+button{
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;    
+}
+
+label{
+    font-size: 18px;
+}
+
+input{
+    height: 25px;
+    font-size: 18px;
+}
+
+
+
+.cartList{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 5px;
+    width: 700px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #a7afb8;
+    padding: 10px 10px;
+}
+
+.flexItem{
+    display: block;
+    margin: 0;
+}
+
+
+.cartProduct {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+
+.total{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.amountInput{
+    width: 40px;
+    margin-right: 5px;
+}
+
+
+.inputWrapper{
+    padding: 10px;
+}
+
+.oderForm{
+    margin: auto;
+    text-align: center;
+}
+
+.formItem{
+    margin: 5px;
+}
+
+.clearButton{
+    background-color: rgb(128, 54, 54);
+    color: white;
+}
+
+.clearButton:hover{
+    transition: 0.2s ease-out;
+    background-color: rgb(161, 69, 69);
+}
+
+.submitbutton{
+    background-color: rgb(54, 128, 54);
+    color: white;
+}
+
+.submitbutton:hover{
+    transition: 0.2s ease-out;
+    background-color: rgb(64, 161, 64);
+}
+
+.backButton{
+    font-size: 20px;
+    color: lightgray;
+}
+
+.backButton:hover{
+    color: white;
+    transition: 0.2s ease-out;
+}
+
+.emptyCart{
+    text-align: center;
+    font-size: 24px;
+}
+
+.deleteItem{
+    margin-top: 0;
+}
+

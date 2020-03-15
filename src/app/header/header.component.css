@@ -1,0 +1,36 @@
+
+.headerBar{
+    border-bottom: 2px solid black;
+    background-color: #313d47;
+    padding: 10px 20px 20px 20px;
+}
+
+h1, a, span{
+    color: lightgray;
+}
+
+h1:hover, a:hover{
+    color: white;
+    transition: 0.2s ease-out;
+}
+
+.header{
+    text-align: center;
+    width: 200px;
+    margin: auto;
+}
+
+.checkout{
+    display: block;
+    text-align: right;
+    font-size: 22px;
+}
+
+.checkoutLink{
+    text-decoration: none;
+}
+
+.checkoutLink:hover{
+    text-decoration: underline;
+}
+

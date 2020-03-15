@@ -1,0 +1,36 @@
+<div class="productdetails">
+  <a class="backLink" [routerLink]="['/']">
+    <i class="material-icons myIcons">arrow_back</i>
+    Back to Productlist
+  </a>
+
+  <h2>Product Details</h2>
+
+  <div *ngIf="product; else no_data">
+    <div class="item">
+      <h3>{{ product.name }}</h3>
+      <p>Price: {{ product.price + product.currency}}</p>
+      <p>Description: {{ product.description }}</p>
+
+      <form class="oderForm" [formGroup]="amountForm" (ngSubmit)="addItemToCart(product, amountForm.value)">
+        <div class="formItem">
+          <label for="amount">
+            Amount:
+          </label>
+          <input id="amount" type="text" formControlName="amount">
+          <button class="buyButton" type="submit">
+            Buy
+          </button>
+          <button class="shareButton" (click)="share()">
+            Share
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <ng-template #no_data>
+    <p>no data...</p>
+  </ng-template>
+</div>

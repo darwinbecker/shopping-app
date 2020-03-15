@@ -1,0 +1,32 @@
+
+.productdetails{
+    padding: 20px;
+}
+
+input{
+    font-size: 18px;
+    width: 50px;
+}
+
+
+.buyButton{
+    background-color: rgb(64, 204, 64);
+    margin: 0 10px;
+}
+
+.shareButton{
+    background-color: rgb(85, 200, 200);
+}
+
+.shareButton:hover{
+    background-color: rgb(102, 233, 233);
+    transition: 0.2s ease-out;
+}
+
+.buyButton:hover{
+    background-color: rgb(80, 240, 80);
+    transition: 0.2s ease-out;
+}
+
+
+

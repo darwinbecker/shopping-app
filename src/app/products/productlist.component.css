@@ -1,0 +1,26 @@
+
+.productlist{
+    padding: 20px;
+}
+
+a{
+    color: black;
+}
+
+a:hover{
+    color: rgb(92, 92, 92);
+    transition: 0.2s ease-out;
+}
+
+
+.item{
+    padding: 0 0 10px 10px;
+}
+
+.productLink{
+    text-decoration: none;
+}
+
+.productLink:hover{
+    text-decoration: underline;
+}

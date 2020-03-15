@@ -1,0 +1,87 @@
+<div class="cart">
+    <a class="backLink" [routerLink]="['/']">
+        <i class="material-icons myIcons">arrow_back</i>
+        Back to Productlist
+    </a>
+
+    <h2>Cart</h2>
+
+    <div>
+        <a routerLink="/shipping">Shipping Prices</a>
+    </div>
+
+    <div *ngIf="items.length>0; else empty_cart">
+
+        <div *ngFor="let item of items">
+            <div class="cartList">
+                <div class="flexItem">
+                    <form class="cartForm" [formGroup]="changeAmountForm"
+                        (ngSubmit)="changeAmount(item, changeAmountForm.value)">
+                        <input class="amountInput" formControlName="amount" placeholder="{{ item.amount }}">x
+                    </form>
+                </div>
+                <div class="flexItem">
+                    <a class="cartProduct" [title]="item.name + ' details'" [routerLink]="['/products', item.productId]"
+                        routerLinkActive="router-link-active">
+                        <span>{{ item.name }} </span>
+                        <span>{{ item.price }}</span>
+                        <span>{{ item.currency }} </span>
+                    </a>
+                </div>
+                <div class="flexItem">
+                    <button class="deleteItem" (click)="deleteItem(item)">delete</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="total">Total:
+            {{ getTotal() }}$
+        </div>
+
+        <span>
+            <button class="clearButton" (click)="clearCart()">clear cart</button>
+        </span>
+
+        <div class="formWrapper">
+            <form class="oderForm" [formGroup]="checkoutForm" (ngSubmit)="submitOrder(checkoutForm.value)">
+
+                <div class="inputWrapper">
+                    <div class="formItem">
+                        <label for="name">
+                            Name
+                        </label>
+                        <div>
+                            <input id="name" type="text" formControlName="name">
+                            <control-messages [control]="checkoutForm.get('name')"></control-messages>
+                        </div>
+                    </div>
+                    <div class="formItem">
+                        <label for="address">
+                            Address
+                        </label>
+                        <div>
+                            <input id="address" type="text" formControlName="address">
+                            <control-messages [control]="checkoutForm.get('address')"></control-messages>
+                        </div>
+                    </div>
+                    <div class="formItem">
+                        <label for="email">
+                            Email
+                        </label>
+                        <div>
+                            <input id="email" type="text" formControlName="email">
+                            <control-messages [control]="checkoutForm.get('email')"></control-messages>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="submitbutton" type="submit" [disabled]="!checkoutForm.valid">Purchase</button>
+            </form>
+        </div>
+
+    </div>
+
+    <ng-template #empty_cart>
+        <p class="emptyCart">Your cart is empty, add an item and it will be displayed here.</p>
+    </ng-template>
+</div>
